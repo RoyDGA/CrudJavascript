@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-black text-white">
+    <form onsubmit="index(); return false;" class="border-2 border-black w-96 mx-auto my-auto flex flex-col px-4">
+        <fieldset class="border-2">
+            <legend>Escribir...</legend>
+            <label>
+                <input type="text" class="inputText border-2 border-lime-200 bg-black outline-lime-200">
+            </label>
+        </fieldset>
+        <button type="submit" class="bg-red-700 my-4 text-white">Añadir elemento</button>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
