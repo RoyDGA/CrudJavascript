@@ -11,6 +11,7 @@ function index() {
 
 window.onload = () =>{
     var storedList = JSON.parse(localStorage.getItem("listElementObjects"));
+
     if (storedList) {
         listElementObjects = storedList;
         imprimirLista();
@@ -19,10 +20,15 @@ window.onload = () =>{
 
 function capturarInput(){
     const inputText = document.querySelector('.inputText').value;
-    listElementObjects.push({inputText});
 
-    localStorage.setItem("listElementObjects", JSON.stringify(listElementObjects));
+    
+    if (inputText.trim() !== '') {
+        listElementObjects.push({inputText});
+        localStorage.setItem("listElementObjects", JSON.stringify(listElementObjects));
+    }
+
 }
+
 
 function imprimirLista(){
     // CLEAN LIST
